@@ -83,6 +83,58 @@ export const styles = StyleSheet.create({
       color: '#FFFFFF',
       fontSize: 20,
       textAlign: 'center'
-    }
-   
+    },
+
+    containerStyle: {
+      backgroundColor: '#CDE6F0',
+      flex: 1,
+    },
+    
+    textTitleStyle: {
+      color: 'black',
+      fontSize: 20,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginTop: 20, 
+    },
+    
+    boldTextStyle: {
+      color: 'black',
+      fontWeight: 'bold',
+    },
+
+    boxContainerStyle: {
+      backgroundColor: '#85C6E3', 
+      padding: 20, 
+      borderRadius: 10, 
+      margin: 10, 
+    },
+    
+    radioButtonContainer: {
+      flexDirection: "column", // Alinea los botones y los textos en una columna
+      marginVertical: 5,
+    },
+    radioButtonRow: {
+      flexDirection: "row", // Coloca los botones y los textos en una fila
+    },
+    radioButtonColumn: {
+      flexDirection: "column", // Coloca los botones en una columna
+      alignItems: "flex-start", // Alinea a la izquierda
+    },
+    radioButtonItem: {
+      height: 14,
+      width: 14,
+      backgroundColor: "#CDE6F0",
+      borderRadius: 15,
+      borderWidth: 2,
+      borderColor: "#687685",
+      marginBottom: 20,
+    },
+    radioButtonItemSelected: {
+      backgroundColor: "#3478F5",
+    },
+    radioTextColumn: {
+      flexDirection: "column", // Coloca los textos en una columna
+      marginLeft: 10, // Espacio entre la columna de botones y la columna de textos
+    },
   });

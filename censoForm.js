@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect, useEffect } from "react";
 import {
   SafeAreaView,
   StyleSheet,
@@ -12,9 +12,8 @@ import {
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import { styles } from "../formularios/styles";
-import { useRouter } from 'expo-router';
 
-const censoForm = () => {
+const CensoForm = () => {
 
   return (
     <>
@@ -134,4 +133,4 @@ const loginValidationSchema = yup.object().shape({
     .required("*Campo requerido"),
  
 });
-export default censoForm;
+export default CensoForm;
