@@ -21,12 +21,15 @@ const Main = ({}) => {
       console.log('2:', Array.from(selectedOptions));
       console.log('3:', selectedValue);
       console.log('4:', phoneNumber);
-
-  // Puedes almacenar las respuestas o realizar otras acciones aquí
-
-  // Navega a la siguiente pantalla
-  navigation.navigate('censoForm');
-  };
+        // Validar que numberOfPeople sea un número válido antes de continuar
+        if (!isNaN(numberOfPeople) && numberOfPeople > 0) {
+          // Navegar a la pantalla de formulario de censo con el número de personas como parámetro
+          navigation.navigate('censoForm', { numberOfPeople: parseInt(numberOfPeople) });
+        } else {
+          // Mostrar un mensaje de error si el número de personas no es válido
+          alert('Ingrese un número de personas válido.');
+        }
+      };
 
 
   return (
@@ -155,6 +158,7 @@ const Main = ({}) => {
               value={phoneNumber}
               onChangeText={text => setPhoneNumber(text)}
               placeholder="Celular"
+              keyboardType="numeric"
             />
 
           <Button title="Siguiente" onPress={handleNext} />
